@@ -4,7 +4,7 @@ const usuarioSchema = new mongoose.Schema({
   usuarioId: {
     type: String,
     required: true,
-    unique: true,  // Asegúrate que el campo usuarioId sea único
+    unique: true,
   },
   nombre: String,
   credito: Number,
