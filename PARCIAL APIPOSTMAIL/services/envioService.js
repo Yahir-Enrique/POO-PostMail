@@ -17,11 +17,9 @@ async function registrarEnvio(data) {
         throw new Error('Créditos insuficientes');
     }
 
-    // Registrar producto
     const nuevoProducto = new Producto(producto);
     await nuevoProducto.save();
 
-    // Crear envío
     const nuevoEnvio = new Envio({
         ...data,
         producto: nuevoProducto._id
@@ -29,7 +27,6 @@ async function registrarEnvio(data) {
 
     await nuevoEnvio.save();
 
-    // Descontar créditos
     usuario.credito -= creditoNecesario;
     await usuario.save();
 
