@@ -13,8 +13,8 @@ app.use('/api', apiRoutes);
 
 // Conexión a Mongo
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('Conectado a MongoDB bebe'))
-  .catch((err) => console.error('❌ Error al conectar a MongoDB', err));
+  .then(() => console.log('Conectado al 100% hacia MongoDB 😎😎😎😎😎'))
+  .catch((err) => console.error('Error al conectar a MongoDB', err));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
